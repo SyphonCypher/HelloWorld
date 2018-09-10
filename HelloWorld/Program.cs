@@ -22,7 +22,7 @@ namespace HelloWorld
             string messageTwo = "I am Spartacus";
 
             //Part 2 Attributes of Spartacus
-            Console.WriteLine(messageOne);
+            /*Console.WriteLine(messageOne);
             Console.WriteLine(messageTwo);
             int ageOne = 35;
             int ageTwo = 45;
@@ -176,10 +176,51 @@ namespace HelloWorld
                 default:
                     Console.WriteLine("You will ride horseback.");
                     break;
+             }
 
-            
-            }
+            //Part 12 array examples
+            string[] foodList = new string[5];
+            foodList[0] = "Milk";
+            foodList[1] = "Fruit";
+            foodList[2] = "Meat";
+            foodList[3] = "Wine";
+            foodList[4] = "Bread";
+            Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);*/
 
+            int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
+            Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " + foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
+
+
+            string[] elements = messageTwo.Split(' '); //Splits a string into multiple strings
+            Console.WriteLine(elements[0]); //prints "I"
+            Console.WriteLine(elements[1]); //prints "am"
+            Console.WriteLine(elements[2]); //prints "Spartacus"
+
+
+            string myName = "Sue"; 
+            char[] letters = myName.ToCharArray(); //Splits a value into it's characters
+            Console.WriteLine("The first letter of my name is" + letters[0]);
+
+            Console.WriteLine(myName.IndexOf('S')); //prints "0"
+            Console.WriteLine("foo".IndexOf('o')); //prints 1
+            Console.WriteLine("fee, fie, fo, fum".IndexOf("foe")); //prints 10
+
+
+            List<string> foodList = new List<string>();
+            foodList.Add("Milk");
+            foodList.Add("Fruit");
+            foodList.Add("Meat");
+            foodList.Add("Wine");
+            foodList.Add("Bread");
+
+            foodList.Add("Bepis");
+            Console.WriteLine("{0}, {1}, {2}, {4}, {5}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4], foodList[5]);
+            foodList.Remove("Bepis");
+            Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+            foodList.Insert(1, "Bepis");
+            Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4], foodList[5]);
+            foodList.RemoveAt(1);
+            Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
 
         }
 
